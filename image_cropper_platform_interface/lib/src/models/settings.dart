@@ -16,11 +16,11 @@ abstract class CropAspectRatioPresetData {
 
 enum CropAspectRatioPreset implements CropAspectRatioPresetData {
   original,
-  square,
+  ratio1x1,
   ratio3x2,
   ratio5x3,
   ratio4x3,
-  ratio5x4,
+  ratio4x5,
   ratio7x5,
   ratio16x9,
   ratio9x16;
@@ -30,16 +30,16 @@ enum CropAspectRatioPreset implements CropAspectRatioPresetData {
     switch (this) {
       case CropAspectRatioPreset.original:
         return 'original';
-      case CropAspectRatioPreset.square:
-        return 'square';
+      case CropAspectRatioPreset.ratio1x1:
+        return '1x1';
       case CropAspectRatioPreset.ratio3x2:
         return '3x2';
       case CropAspectRatioPreset.ratio4x3:
         return '4x3';
       case CropAspectRatioPreset.ratio5x3:
         return '5x3';
-      case CropAspectRatioPreset.ratio5x4:
-        return '5x4';
+      case CropAspectRatioPreset.ratio4x5:
+        return '4x5';
       case CropAspectRatioPreset.ratio7x5:
         return '7x5';
       case CropAspectRatioPreset.ratio16x9:
@@ -54,7 +54,7 @@ enum CropAspectRatioPreset implements CropAspectRatioPresetData {
     switch (this) {
       case CropAspectRatioPreset.original:
         return null;
-      case CropAspectRatioPreset.square:
+      case CropAspectRatioPreset.ratio1x1:
         return (1, 1);
       case CropAspectRatioPreset.ratio3x2:
         return (3, 2);
@@ -62,8 +62,8 @@ enum CropAspectRatioPreset implements CropAspectRatioPresetData {
         return (4, 3);
       case CropAspectRatioPreset.ratio5x3:
         return (5, 3);
-      case CropAspectRatioPreset.ratio5x4:
-        return (5, 4);
+      case CropAspectRatioPreset.ratio4x5:
+        return (4, 5);
       case CropAspectRatioPreset.ratio7x5:
         return (7, 5);
       case CropAspectRatioPreset.ratio16x9:
