@@ -22,7 +22,8 @@ enum CropAspectRatioPreset implements CropAspectRatioPresetData {
   ratio4x3,
   ratio5x4,
   ratio7x5,
-  ratio16x9;
+  ratio16x9,
+  ratio9x16;
 
   @override
   String get name {
@@ -43,6 +44,8 @@ enum CropAspectRatioPreset implements CropAspectRatioPresetData {
         return '7x5';
       case CropAspectRatioPreset.ratio16x9:
         return '16x9';
+        case CropAspectRatioPreset.ratio9x16:
+        return '9x16';
     }
   }
 
@@ -65,6 +68,8 @@ enum CropAspectRatioPreset implements CropAspectRatioPresetData {
         return (7, 5);
       case CropAspectRatioPreset.ratio16x9:
         return (16, 9);
+      case CropAspectRatioPreset.ratio9x16:
+        return (9, 16);
     }
   }
 }
