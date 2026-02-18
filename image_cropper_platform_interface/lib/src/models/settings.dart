@@ -22,9 +22,9 @@ enum CropAspectRatioPreset implements CropAspectRatioPresetData {
   ratio4x3,
   ratio5x4,
   ratio7x5,
-  ratio16x9;
-  ratio9x16;
-  ratio4x5;
+  ratio16x9,
+  ratio9x16,
+  ratio4x5,
   ratio1x1;
 
   @override
